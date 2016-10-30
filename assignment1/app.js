@@ -6,7 +6,7 @@
     .controller('myFirstController', function ($scope){
         $scope.lmsg = "Click to assess items captured.";
         $scope.lmenu = "";
-        
+
    $scope.check = function check(){
 
         if ($scope.lmenu==""){
@@ -30,7 +30,6 @@
     for(var i in array){
         if(array[i]==item){
             array.splice(i,1);
-            break;
             }
     }
    }
