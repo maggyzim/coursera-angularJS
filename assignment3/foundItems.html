@@ -1,0 +1,10 @@
+    <div style="display:block">
+        <span ng-if="(!nController.found.length)" class="emptyMessage">Nothing found</span>
+        <ul>
+            <li ng-repeat="item in nController.found">
+                <button class="btn btn-default" ng-click="nController.nope($index)">
+                    <span class="glyphicon glyphicon-ok"></span> Don't want this one!
+                </button>{{item.name}},[{{item.short_name}}],{{item.description}}
+            </li>
+        </ul>
+    </div>
