@@ -13,7 +13,8 @@
       var ddo = {
         templateUrl: 'foundItems.html',
         scope: {
-          found: '<',
+          foundItem: '<',
+          onRemove: '&',
         },
         // controller: 'ShoppingListDirectiveController as list',
         controller: NarrowItDownController,

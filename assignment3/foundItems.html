@@ -1,8 +1,9 @@
     <div style="display:block">
-        <span ng-if="(!nController.found.length)" class="emptyMessage">Nothing found</span>
+        <span ng-if="(!nController.foundItem.length)" class="emptyMessage">Nothing found</span>
+        <span ng-if="(nController.foundItem.length)">{{nController.foundItem.length}} Items Found</span>
         <ul>
-            <li ng-repeat="item in nController.found">
-                <button class="btn btn-default" ng-click="nController.nope($index)">
+            <li ng-repeat="item in nController.foundItem">
+                <button class="btn btn-default" ng-click="nController.onRemove($index)">
                     <span class="glyphicon glyphicon-ok"></span> Don't want this one!
                 </button>{{item.name}},[{{item.short_name}}],{{item.description}}
             </li>
